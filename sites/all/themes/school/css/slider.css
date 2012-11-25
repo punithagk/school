@@ -1,0 +1,24 @@
+#slides{
+	width: 100%;
+	position:relative;
+	overflow:hidden;
+}
+.slides_container{
+	width:950px;
+	height:412px;
+	overflow:hidden;
+}
+.slide{width:950px; height:auto;}
+
+@media only screen and (max-width: 995px){
+	.slides_container{width:758px; height:329px;}
+	.slide{width:758px;}
+}
+@media only screen and (max-width: 767px){
+	.slides_container{width:420px; height:182px;}
+	.slide{width:420px;}
+}
+@media only screen and (max-width: 479px){
+	.slides_container{width:300px; height:130px;}
+	.slide{width:300px;}
+}

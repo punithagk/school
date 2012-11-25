@@ -1,0 +1,62 @@
+nav{float:right; max-width:650px; min-height:100px;}
+.menu {list-style:none;}
+.menu > li {
+	position:relative;
+	float:left;
+	font:bold 15px/19px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	text-transform:uppercase;
+}
+	.menu > li > a {
+		display:block;
+		color:#fff;
+		padding:31px 9px 27px;
+		white-space:nowrap;
+	}
+		.menu > li > a:hover{text-decoration:none;}
+		.menu > li.sfHover > a, .menu > li.current > a {padding-bottom:36px !important; padding-top:31px !important;}
+	.menu .menu-arrow{display:none;}
+/***submenu***/
+.menu ul {
+	position:absolute;
+	top:-999em;
+	width:100px; 
+	display:none;
+	padding:20px;
+	background:#000;
+	z-index:999;
+}
+.menu li li{
+	width:100%;
+	padding:0;
+	margin-bottom:10px;
+	font:normal 14px/17px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	position:relative;
+}
+	.menu li li a{color:#fff;}
+		.menu li li > a:hover,.menu li li.sfHover > a{color:#9bba1f; text-decoration:none;}
+.menu li:hover ul, .menu li.sfHover ul {left:0; top:87px;}
+.menu li:hover li ul, .menu li.sfHover li ul {top:-999em;}
+
+@media only screen and (max-width: 995px){
+	nav{max-width:530px;}
+	.menu li {font-size:13px !important; line-height:16px !important;}
+	.menu > li > a {padding:31px 5px 27px;}
+	.menu .menu-arrow{display:block; width:100%; height:6px; overflow:hidden; text-indent:-999em; font-size:0; line-height:0; background:url(../images/menu-arrow.gif) center top no-repeat; margin-bottom:-6px;}
+	/***submenu***/
+	.menu li:hover ul, .menu li.sfHover ul {top:85px;}
+}
+
+@media only screen and (max-width: 767px) {
+	nav{width:100%;}
+	.menu > li {float:none; margin-right:0px;}
+	.menu > li > a{padding:15px 20px !important;}
+		.menu > li > a:hover, .menu > li.sfHover > a, .menu > li.current > a {padding:11px 16px !important; border-width:4px; border-style:solid;}
+			.menu > li > a.bg-color1:hover, .menu > li.sfHover > a.bg-color1, .menu > li.current > a.bg-color1 {border-color:#88a70e;}
+			.menu > li > a.bg-color2:hover, .menu > li.sfHover > a.bg-color2, .menu > li.current > a.bg-color2 {border-color:#cf8300;}
+			.menu > li > a.bg-color3:hover, .menu > li.sfHover > a.bg-color3, .menu > li.current > a.bg-color3 {border-color:#af1e1e;}
+			.menu > li > a.bg-color4:hover, .menu > li.sfHover > a.bg-color4, .menu > li.current > a.bg-color4 {border-color:#0ba1c0;}
+	.menu .menu-arrow{display:inline-block; width:9px; margin:0 0 0 5px; vertical-align:middle;}
+	/***submenu***/
+	.menu ul {position:static; width:auto;}
+	.menu li li{margin-bottom:15px;}
+}
